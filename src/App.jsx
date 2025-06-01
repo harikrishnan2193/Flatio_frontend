@@ -9,14 +9,18 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Auth />} />
-        <Route path="/register" element={<Auth />} />
-        <Route path="/cp" element={<Cp />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/lead" element={<Lead />} />
-      </Routes>
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <main className="flex-grow">
+          <Routes>
+            <Route path='/' element={<Auth />} />
+            <Route path="/register" element={<Auth />} />
+            <Route path="/cp" element={<Cp />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/lead" element={<Lead />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
